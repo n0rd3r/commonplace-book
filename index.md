@@ -1,9 +1,9 @@
 Table of Contents
 
 1. [Recipes](#recipes)
-2. Quotes
-3. Film
-4. Music
+2. [Quotes](#quotes)
+3. [Film](#film)
+4. [Music](#music)
 
 # Recipes
 
