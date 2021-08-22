@@ -1,4 +1,4 @@
-[Commonplace Book](https://en.m.wikipedia.org/wiki/Commonplace_book)
+[Commonplace Book Wikipedia Article](https://en.m.wikipedia.org/wiki/Commonplace_book)
 
 Table of Contents
 
