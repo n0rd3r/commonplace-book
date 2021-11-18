@@ -1,0 +1,84 @@
+<html>
+    <style>
+        td {
+        height: 130px;
+        width: 130px;
+        vertical-align: middle;
+        text-align: center;
+        }
+
+        div {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 6em;
+        }
+        #timer {
+            font-size: 3em;
+        }
+    </style>
+    <script>
+        var x;
+        var countdown;
+        d = {};
+        d[1] = ["A", "E", "A", "N", "E", "G"];
+        d[2] = ["T", "I", "T", "S", "Y", "D"];
+        d[3] = ["A", "P", "S", "H", "O", "C"];
+        d[4] = ["H", "N", "L", "N", "Z", "R"];
+        d[5] = ["E", "E", "H", "N", "G", "W"];
+        d[6] = ["O", "O", "T", "W", "T", "A"];
+        d[7] = ["U", "S", "E", "E", "N", "I"];
+        d[8] = ["O", "U", "M", "C", "I", "T"];
+        d[9] = ["Y", "E", "D", "L", "R", "V"];
+        d[10] = ["L", "E", "Y", "T", "T", "R"];
+        d[11] = ["H", "E", "V", "W", "R", "T"];
+        d[12] = ["A", "O", "B", "B", "O", "J"];
+        d[13] = ["N", "M", "I", "Qu", "H", "U"];
+        d[14] = ["F", "A", "S", "P", "F", "K"];
+        d[15] = ["S", "E", "I", "T", "S", "O"];
+        d[16] = ["X", "R", "D", "I", "E", "L"];
+
+        
+
+        function startTimer() {
+            clearInterval(x);
+            countdown = 120;
+            shuffleLetters();
+            document.getElementById("timer").innerHTML = "START!";
+            x = setInterval(function() {
+                document.getElementById("timer").innerHTML = countdown.toString();
+                if (countdown < 1) {
+                    clearInterval(x);
+                    document.getElementById("timer").innerHTML = "DONE!";
+                }
+                countdown--;
+            }, 1000);
+        }
+
+        function roll() {
+            return Math.floor(Math.random() * 6);
+        }
+
+        function shuffleLetters() {
+            var die = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+            for (var i = 0; i < 16; i++) {
+                field = "c" + (i+1);
+                dice = Math.floor(Math.random() * die.length);
+                r = roll();
+                document.getElementById(field).innerHTML = d[die[dice]][r];
+                console.log("Die Number: " + die[dice]);
+                console.log("Roll Number: " + r);
+                die.splice(dice, 1)
+            }
+        }
+    </script>
+<body>
+<table border="1">
+    <tr><td><div id="c1">A</div></td></td><td><div id="c2">Qu</div></td><td><div id="c3">C</div></td><td><div id="c4">D</div></td></tr>
+    <tr><td><div id="c5">E</div></td><td><div id="c6">F</div></td><td><div id="c7">G</div></td><td><div id="c8">H</div></td></tr>
+    <tr><td><div id="c9">I</div></td><td><div id="c10">J</div></td><td><div id="c11">K</div></td><td><div id="c12">L</div></td></tr>
+    <tr><td><div id="c13">M</div></td><td><div id="c14">N</div></td><td><div id="c15">O</div></td><td><div id="c16">Z</div></td></tr>
+</table>
+<hr/>
+<div id="timer">Timer</div>
+<button id="cmdRun" onclick="startTimer();">Start</button>
+</body>
+</html>
