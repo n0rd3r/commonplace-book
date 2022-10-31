@@ -9,7 +9,13 @@ Table of Contents
 
 # Recipes
 
-Receipes go here
+Lentil Beans
+
+Greens and Beans
+
+Sauerkraut
+
+
 
 # Quotes
 # Film
